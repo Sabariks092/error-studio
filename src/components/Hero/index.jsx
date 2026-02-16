@@ -1,47 +1,80 @@
-import React from 'react';
-import parse from 'html-react-parser';
-import './hero.css';
-import Button from '../Button';
-import Div from '../Div';
-import VerticalLinks from '../VerticalLinks';
+// import React, { useState, useEffect } from "react";
+import parse from "html-react-parser";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Autoplay } from "swiper/modules";
+import "swiper/css";
+import "./hero.css";
+import Button from "../Button";
+import Div from "../Div";
+import VerticalLinks from "../VerticalLinks";
+import carousel1 from "../../assets/images/website/carousel/Banner-02.webp";
+import carousel2 from "../../assets/images/website/carousel/Banner.webp";
+import carousel3 from "../../assets/images/website/Best Work/Best Album/12x36/52.webp";
+import carousel4 from "../../assets/images/website/Best Work/Best Album/12x36/54.webp";
 
 export default function Hero({
   title,
   subtitle,
   btnText,
   btnLink,
-  scrollDownId,
   socialLinksHeading,
   heroSocialLinks,
-  bgImageUrl,
 }) {
+  const images = [carousel2,carousel1 ,carousel3, carousel4];
+  console.log("Carousel Images:", images);
+
   return (
-    <Div
-      className="cs-hero cs-style1 cs-bg cs-fixed_bg cs-shape_wrap_1"
-      style={{ backgroundImage: `url(${bgImageUrl})` }}
-    >
+    <Div className="cs-hero cs-style1 cs-bg cs-fixed_bg cs-shape_wrap_1 relative overflow-hidden">
+      {/* Swiper Background Slider */}
+      <div className="absolute inset-0 z-0">
+        <Swiper
+          modules={[Autoplay]}
+          speed={1000}
+          autoplay={{
+            delay: 3000,
+            disableOnInteraction: false,
+          }}
+          loop={true}
+          className="h-full w-full"
+        >
+          {images.map((img, index) => (
+            <SwiperSlide key={index} className="h-full w-full">
+              <div
+                className="h-full w-full bg-cover bg-center ken-burns"
+                style={{ backgroundImage: `url(${img})` }}
+              />
+            </SwiperSlide>
+          ))}
+        </Swiper>
+      </div>
+
+      {/* Overlay - requested blur and dark overlay */}
+      <div className="absolute inset-0 bg-black/20 z-1 pointer-events-none" />
+
       <Div className="cs-shape_1" />
       <Div className="cs-shape_1" />
       <Div className="cs-shape_1" />
-      <Div className="container h-full">
+
+      {/* Content */}
+      <Div className="container h-full relative z-10">
         <Div className="cs-hero_text h-full">
           <div className="flex justify-between flex-col h-full">
             <h1 className="cs-hero_title">{parse(title)}</h1>
-          <Div className="cs-hero_info">
-            <Div>
-              <Button btnLink={btnLink} btnText={btnText} />
+            <Div className="cs-hero_info">
+              <Div>
+                <Div className="cs-hero_subtitle">{subtitle}</Div>
+              </Div>
+              <div className="text-end">
+                <Button btnLink={btnLink} btnText={btnText} />
+              </div>
             </Div>
-            <Div>
-              <Div className="cs-hero_subtitle">{subtitle}</Div>
-            </Div>
-          </Div>
           </div>
         </Div>
       </Div>
       <VerticalLinks data={heroSocialLinks} title={socialLinksHeading} />
-      <a href={scrollDownId} className="cs-down_btn">
+      {/* <a href={scrollDownId} className="cs-down_btn">
         .
-      </a>
+      </a> */}
     </Div>
   );
 }

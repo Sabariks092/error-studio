@@ -23,7 +23,7 @@
 .cs-card.cs-style1 .cs-card_info {
   position: absolute;
   padding: 45px 25px 0;
-  top: 0;
+  bottom: 15px;
   left: 0;
 }
 .cs-card.cs-style1 .cs-card_info span {
@@ -34,7 +34,7 @@
   margin-bottom: 10px;
 }
 .cs-card.cs-style1 .cs-card_title {
-  font-size: 22px;
+  font-size: 14px;
   margin: 0;
   line-height: 1.5em;
 }

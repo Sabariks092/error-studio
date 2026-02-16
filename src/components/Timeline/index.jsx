@@ -10,7 +10,7 @@ export default function Timeline({columnData}) {
           <h3 className="cs-accent_color">{item.year}</h3>
           <h2>{item.name}</h2>
           <p>{item.position}</p>
-          <p>{item.type}</p>
+          {/* <p>{item.type}</p> */}
         </Div>
       ))}
     </>

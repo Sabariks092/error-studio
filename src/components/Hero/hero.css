@@ -82,10 +82,11 @@
   min-height: 1000px;
 }
 .cs-hero.cs-style1 .cs-hero_title {
-  font-size: 80px;
+  font-size: 50px;
   font-weight: 700;
   margin-bottom: 60px;
   line-height: 1.25em;
+  text-align: end;
 }
 .cs-hero.cs-style1 .cs-hero_title span {
   color: var(--accent);
@@ -1215,3 +1216,22 @@
 .cs-hero.cs-style8.cs-shape_wrap_1 .cs-shape_1:nth-child(1) {
   left: 50%;
 }
+
+/* Ken Burns Effect */
+@keyframes kenBurns {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1.15);
+  }
+}
+
+.ken-burns {
+  animation: kenBurns 10s ease-out infinite alternate;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+}
+

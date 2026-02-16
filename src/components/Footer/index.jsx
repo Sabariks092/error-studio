@@ -6,7 +6,7 @@ import Newsletter from '../Widget/Newsletter';
 import SocialWidget from '../Widget/SocialWidget';
 import TextWidget from '../Widget/TextWidget';
 import './footer.css';
-import footerLogo from '../../assets/images/footer_logo.svg';
+import footerLogo from '../../assets/images/error-studio-logo.png';
 
 const copyrightLinks = [
   {

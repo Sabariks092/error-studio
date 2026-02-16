@@ -2,9 +2,9 @@ import React from 'react';
 import Slider from 'react-slick';
 import Div from '../Div';
 import Post from '../Post';
-import post1 from '../../assets/images/post_1.jpeg';
-import post2 from '../../assets/images/post_2.jpeg';
-import post3 from '../../assets/images/post_3.jpeg';
+import post1 from '../../assets/images/website/Instagram Posters/0-(4).webp';
+import post2 from '../../assets/images/website/Instagram Posters/8-(2).webp';
+import post3 from '../../assets/images/website/Instagram Posters/11-(4).webp';
 
 const postData = [
   {

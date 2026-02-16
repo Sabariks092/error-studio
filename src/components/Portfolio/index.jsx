@@ -16,9 +16,9 @@ export default function Portfolio({ href, src, title, subtitle, variant }) {
           style={{ backgroundImage: `url("${src}")` }}
         />
         <Div className="cs-portfolio_info">
-          <Div className="cs-portfolio_info_bg cs-accent_bg" />
-          <h2 className="cs-portfolio_title">{title}</h2>
-          <Div className="cs-portfolio_subtitle">{subtitle}</Div>
+          <Div className="cs-portfolio_info_bg bg-[#F9A30A]" />
+          <h2 className="cs-portfolio_title text-dark">{title}</h2>
+          <Div className="cs-portfolio_subtitle text-gray-300" >{subtitle}</Div>
         </Div>
       </>
     </Link>

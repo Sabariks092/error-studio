@@ -16,15 +16,17 @@ import VideoModal from '../VideoModal';
 import TimelineSlider from '../Slider/TimelineSlider';
 import { pageTitle } from '../../helper';
 import hero_bg from '../../assets/images/hero_bg.jpeg';
-import service_1 from '../../assets/images/service_1.jpeg';
-import service_2 from '../../assets/images/service_2.jpeg';
-import service_3 from '../../assets/images/service_3.jpeg';
-import service_4 from '../../assets/images/service_4.jpeg';
-import portfolio_1 from '../../assets/images/portfolio_1.jpeg';
-import portfolio_2 from '../../assets/images/portfolio_2.jpeg';
-import portfolio_0 from '../../assets/images/portfolio_0.jpg';
-import portfolio_3 from '../../assets/images/portfolio_3.jpeg';
-import video_bg from '../../assets/images/video_bg.jpeg';
+import service_1 from '../../assets/images/website/Instagram Posters/5-(1).webp';
+import service_2 from '../../assets/images/website/Instagram Posters/16-(3).webp';
+import service_3 from '../../assets/images/website/Instagram Posters/00-(4).webp';
+import service_4 from '../../assets/images/website/Instagram Posters/14-(8).webp';
+import portfolio_1 from '../../assets/images/website/Best Work/Best Album/12x36/21.webp';
+import portfolio_2 from '../../assets/images/website/Best Work/Best Album/12x36/35.webp';
+import portfolio_3 from '../../assets/images/website/Best Work/Best Album/12x36/44.webp';
+import portfolio_4 from '../../assets/images/website/Best Work/Best Album/12x36/42-(4).webp';
+import portfolio_5 from '../../assets/images/website/Best Work/Best Album/12x36/49-(2).webp';
+
+import video_bg from '../../assets/images/website/Best Work/Best Album/12x36/22.webp';
 import cta_bg from '../../assets/images/cta_bg.jpeg';
 // Hero Social Links
 const heroSocialLinks = [
@@ -74,13 +76,19 @@ const portfolioData = [
     title: 'Essence of Maternity',
     subtitle: 'Portrait Session',
     href: '/portfolio/portfolio-details',
-    src: portfolio_0,
+    src: portfolio_3,
   },
   {
     title: 'Urban Fashion',
     subtitle: 'Commercial Shoot',
     href: '/portfolio/portfolio-details',
-    src: portfolio_3,
+    src: portfolio_4,
+  },
+  {
+    title: 'Urban Fashion',
+    subtitle: 'Commercial Shoot',
+    href: '/portfolio/portfolio-details',
+    src: portfolio_5,
   },
 ];
 
@@ -195,7 +203,7 @@ export default function Home() {
       </Div>
       {/* End Portfolio Section */}
 
-      {/* Start Awards Section */}
+      {/* Start Journey Section */}
       <Spacing lg="150" md="80" />
       <Div className="cs-shape_wrap_2">
         <Div className="cs-shape_2">
@@ -205,8 +213,8 @@ export default function Home() {
           <Div className="row">
             <Div className="col-xl-4">
               <SectionHeading
-                title="We get multiple awards"
-                subtitle="Our Awards"
+                title="We Built Our Legacy"
+                subtitle="Our Journey"
                 variant="cs-style1"
               />
               <Spacing lg="90" md="45" />
@@ -217,14 +225,13 @@ export default function Home() {
           </Div>
         </Div>
       </Div>
-      {/* End Awards Section */}
+      {/* End Journey Section */}
 
       {/* Start Video Block Section */}
       <Spacing lg="130" md="70" />
       <Div className="container">
-        <h2 className="cs-font_50 cs-m0 text-center cs-line_height_4">
-          Our agile process is ability to adapt and respond to change. Agile
-          organizations view change as an opportunity, not a threat.
+        <h2 className="cs-font_50 max-w-6xl mx-auto cs-m0 text-center cs-line_height_4">
+          Our agile process is ability to adapt and respond to change. 
         </h2>
         <Spacing lg="70" md="70" />
         <VideoModal
@@ -294,7 +301,7 @@ export default function Home() {
       {/* Start CTA Section */}
       <Div className="container">
         <Cta
-          title="Let’s discuss making <br />something <i>cool</i> together"
+          title="Let’s discuss making <br /><i>Memories together</i>"
           btnText="Apply For Meeting"
           btnLink="/contact"
           bgSrc={cta_bg}
