@@ -10,8 +10,8 @@ export default function PageHeading({ title, bgSrc, pageLinkText }) {
     >
       <Div className="container">
         <Div className="cs-page_heading_in">
-          <h1 className="cs-page_title cs-font_50 cs-white_color">{title}</h1>
-          <ol className="breadcrumb text-uppercase">
+          <h1 className="cs-page_title cs-font_50 cs-white_color max-w-300">{title}</h1>
+          <ol className="breadcrumb text-uppercase justify-content-center">
             <li className="breadcrumb-item">
               <Link to="/">Home</Link>
             </li>

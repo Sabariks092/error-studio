@@ -16,8 +16,13 @@ export default function Hero9({
   const [iframeSrc, setIframeSrc] = useState('about:blank');
   const [toggle, setToggle] = useState(false);
   const handelClick = () => {
-    const video = videoSrc.split('?v=')[1].trim();
-    setIframeSrc(`https://www.youtube.com/embed/${video}`);
+    let videoId = '';
+    if (videoSrc.includes('v=')) {
+      videoId = videoSrc.split('v=')[1].split('&')[0];
+    } else if (videoSrc.includes('youtu.be/')) {
+      videoId = videoSrc.split('youtu.be/')[1].split('?')[0];
+    }
+    setIframeSrc(`https://www.youtube.com/embed/${videoId}`);
     setToggle(!toggle);
   };
   const handelClose = () => {

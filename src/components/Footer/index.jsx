@@ -10,13 +10,9 @@ import footerLogo from '../../assets/images/error-studio-logo.png';
 
 const copyrightLinks = [
   {
-    title: 'Terms of Use',
+    title: 'Designed And Developed By  Innovations',
     href: '/',
-  },
-  {
-    title: 'Privacy Policy',
-    href: '/',
-  },
+  }
 ];
 
 const serviceMenu = [
@@ -25,16 +21,16 @@ const serviceMenu = [
     href: '/service/wedding-photography',
   },
   {
-    title: 'Event Coverage',
-    href: '/service/event-coverage',
+    title: 'Cinematic Videography',
+    href: '/service/videography',
   },
   {
-    title: 'Commercial & Product',
+    title: 'Creative Editing',
+    href: '/service/video-editing',
+  },
+  {
+    title: 'Brand & Commercial',
     href: '/service/commercial',
-  },
-  {
-    title: 'Post-Production',
-    href: '/service/editing',
   },
 ];
 
@@ -61,15 +57,14 @@ export default function Footer({ copyrightText, logoSrc, logoAlt, text }) {
             </Div>
             <Div className="col-lg-3 col-sm-6">
               <Div className="cs-footer_item">
-                <ContactInfoWidget title="Contact Us" />
+                <ContactInfoWidget title="Contact Us" withIcon />
               </Div>
             </Div>
             <Div className="col-lg-3 col-sm-6">
               <Div className="cs-footer_item">
-                <Newsletter
-                  title="Subscribe"
-                  subtitle="Stay updated with our latest projects and offers."
-                  placeholder="example@gmail.com"
+               <Newsletter
+                  title="Reach Us"
+               
                 />
               </Div>
             </Div>

@@ -8,10 +8,10 @@ import SectionHeading from '../SectionHeading';
 import TeamSlider from '../Slider/TeamSlider';
 import Spacing from '../Spacing';
 import aboutHeroBg from '../../assets/images/about_hero_bg.jpeg';
-import aboutImg1 from '../../assets/images/about_img_1.jpeg';
-import aboutImg2 from '../../assets/images/about_img_2.jpeg';
-import aboutImg3 from '../../assets/images/about_img_3.jpeg';
-import aboutImg4 from '../../assets/images/about_img_4.jpeg';
+import aboutImg1 from '../../assets/images/website/Instagram Posters/13-(1).webp';
+import aboutImg2 from '../../assets/images/website/Instagram Posters/1-(1).webp';
+import aboutImg3 from '../../assets/images/website/Instagram Posters/6-(1).webp';
+import aboutImg4 from '../../assets/images/website/Instagram Posters/9-(1).webp';
 import ctaBg from '../../assets/images/cta_bg.jpeg';
 
 const funfaceData = [

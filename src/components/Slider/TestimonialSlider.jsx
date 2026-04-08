@@ -4,9 +4,10 @@ import { Icon } from '@iconify/react';
 import Testimonial from '../Testimonial';
 import Div from '../Div';
 import Spacing from '../Spacing';
-import testimonial1 from '../../assets/images/testimonial_1.jpeg';
-import testimonial2 from '../../assets/images/testimonial_2.jpeg';
-import testimonial3 from '../../assets/images/testimonial_3.jpeg';
+import testimonial1 from '../../assets/images/website/Instagram Posters/0-(1).webp';
+import testimonial2 from '../../assets/images/website/Instagram Posters/14-(8).webp';
+import testimonial3 from '../../assets/images/website/Instagram Posters/00-(4).webp';
+import testimonial4 from '../../assets/images/website/Instagram Posters/13-(1).webp';
 import shape1 from '../../assets/images/shape_1.svg';
 
 const testimonialData = [
@@ -35,10 +36,10 @@ const testimonialData = [
     ratings: '4.5',
   },
   {
-    testimonialThumb: testimonial1,
+    testimonialThumb: testimonial4,
     testimonialText:
       'Innovative and reliable. Their product photography significantly boosted our online sales. The attention to detail is unmatched.',
-    avatarName: 'Suresh Menon',
+    avatarName: 'Suresh',
     avatarDesignation: 'E-commerce Manager',
     ratings: '4.5',
   },

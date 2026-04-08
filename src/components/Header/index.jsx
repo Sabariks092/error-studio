@@ -26,16 +26,15 @@ export default function Header({ variant }) {
   return (
     <>
       <header
-        className={`cs-site_header cs-style1 text-uppercase ${
-          variant ? variant : ''
-        } cs-sticky_header ${isSticky ? 'cs-sticky_header_active' : ''}`}
+        className={`cs-site_header cs-style1 text-uppercase ${variant ? variant : ''
+          } cs-sticky_header ${isSticky ? 'cs-sticky_header_active' : ''}`}
       >
         <Div className="cs-main_header">
           <Div className="container">
             <Div className="cs-main_header_in">
               <Div className="cs-main_header_left">
                 <Link className="cs-site_branding" to="/">
-                  <img src={logo} alt="Logo" width={100} height={100} style={{borderRadius:"100%", height:"100px"}} />
+                  <img src={logo} alt="Logo" width={100} height={100} style={{ borderRadius: "100%", height: "100px" }} />
                 </Link>
               </Div>
               <Div className="cs-main_header_center">
@@ -44,11 +43,11 @@ export default function Header({ variant }) {
                     className="cs-nav_list"
                     style={{ display: `${mobileToggle ? 'block' : 'none'}` }}
                   >
-                    <li className="menu-item-has-children">
+                    <li >
                       <NavLink to="/" onClick={() => setMobileToggle(false)}>
                         Home
                       </NavLink>
-                      <DropDown>
+                      {/* <DropDown>
                         <ul>
                           <li>
                             <Link to="/" onClick={() => setMobileToggle(false)}>
@@ -144,7 +143,7 @@ export default function Header({ variant }) {
                             </Link>
                           </li>
                         </ul>
-                      </DropDown>
+                      </DropDown> */}
                     </li>
                     <li>
                       <NavLink
@@ -165,18 +164,34 @@ export default function Header({ variant }) {
                         <ul>
                           <li>
                             <Link
-                              to="service"
+                              to="service/wedding-photography"
                               onClick={() => setMobileToggle(false)}
                             >
-                              Services
+                              Wedding Photography
                             </Link>
                           </li>
                           <li>
                             <Link
-                              to="/service/service-details"
+                              to="service/videography"
                               onClick={() => setMobileToggle(false)}
                             >
-                              Service Details
+                              Cinematic Videography
+                            </Link>
+                          </li>
+                          <li>
+                            <Link
+                              to="service/video-editing"
+                              onClick={() => setMobileToggle(false)}
+                            >
+                              Creative Editing
+                            </Link>
+                          </li>
+                          <li>
+                            <Link
+                              to="service/commercial"
+                              onClick={() => setMobileToggle(false)}
+                            >
+                              Brand & Commercial
                             </Link>
                           </li>
                         </ul>
@@ -210,36 +225,16 @@ export default function Header({ variant }) {
                         </ul>
                       </DropDown> */}
                     </li>
-                    <li className="menu-item-has-children">
+                    <li >
                       <NavLink to="blog" onClick={() => setMobileToggle(false)}>
-                        Blog
+                        Blogs
                       </NavLink>
-                      <DropDown>
-                        <ul>
-                          <li>
-                            <Link
-                              to="blog"
-                              onClick={() => setMobileToggle(false)}
-                            >
-                              Blog
-                            </Link>
-                          </li>
-                          <li>
-                            <Link
-                              to="blog/blog-details"
-                              onClick={() => setMobileToggle(false)}
-                            >
-                              Blog Details
-                            </Link>
-                          </li>
-                        </ul>
-                      </DropDown>
                     </li>
-                    <li className="menu-item-has-children">
-                      <Link to="/" onClick={() => setMobileToggle(false)}>
-                        Pages
+                    <li >
+                      <Link to="/contact" onClick={() => setMobileToggle(false)}>
+                        Contact
                       </Link>
-                      <DropDown>
+                      {/* <DropDown>
                         <ul>
                           <li>
                             <Link
@@ -282,7 +277,7 @@ export default function Header({ variant }) {
                             </Link>
                           </li>
                         </ul>
-                      </DropDown>
+                      </DropDown> */}
                     </li>
                   </ul>
                   <span

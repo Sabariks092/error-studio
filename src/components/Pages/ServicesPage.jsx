@@ -9,12 +9,10 @@ import SectionHeading from '../SectionHeading'
 import TestimonialSlider from '../Slider/TestimonialSlider'
 import Spacing from '../Spacing'
 import serviceHeroBg from '../../assets/images/service_hero_bg.jpeg'
-import service1 from '../../assets/images/service_1.jpeg'
-import service2 from '../../assets/images/service_2.jpeg'
-import service3 from '../../assets/images/service_3.jpeg'
-import service4 from '../../assets/images/service_4.jpeg'
-import service5 from '../../assets/images/service_5.jpeg'
-import service6 from '../../assets/images/service_6.jpeg'
+import service_1 from '../../assets/images/website/Instagram Posters/5-(1).webp';
+import service_2 from '../../assets/images/website/Instagram Posters/16-(3).webp';
+import service_3 from '../../assets/images/website/Instagram Posters/00-(4).webp';
+import service_4 from '../../assets/images/website/Instagram Posters/14-(8).webp';
 import ctaBg from '../../assets/images/cta_bg.jpeg'
 
 export default function ServicesPage() {
@@ -42,82 +40,54 @@ export default function ServicesPage() {
               />
               <Spacing lg='90' md='45'/>
             </Div>
-            <Div className='col-xl-8'>
-              <Div className='row'>
-                <Div className='col-lg-3 col-sm-6 cs-hidden_mobile'></Div>
-                <Div className='col-lg-3 col-sm-6'>
+                <Div className="col-xl-8">
+              <Div className="row">
+                <Div className="col-lg-3 col-sm-6 cs-hidden_mobile"></Div>
+                <Div className="col-lg-3 col-sm-6">
                   <Card
-                    title='Wedding Photography'
-                    link='/service/wedding-photography'
-                    src={service1}
-                    alt='Service'
+                    title="Wedding Photography"
+                    link="/service/wedding-photography"
+                    src={service_1}
+                    alt="Service"
                   />
-                  <Spacing lg='0' md='30'/>
+                  <Spacing lg="0" md="30" />
                 </Div>
-                <Div className='col-lg-3 col-sm-6 cs-hidden_mobile'></Div>
-                <Div className='col-lg-3 col-sm-6'>
+                <Div className="col-lg-3 col-sm-6 cs-hidden_mobile"></Div>
+                <Div className="col-lg-3 col-sm-6">
                   <Card
-                    title='Event Coverage'
-                    link='/service/event-coverage'
-                    src={service2}
-                    alt='Service'
+                    title="Cinematic Videography"
+                    link="/service/videography"
+                    src={service_2}
+                    alt="Service"
                   />
-                  <Spacing lg='0' md='30'/>
+                  <Spacing lg="0" md="30" />
                 </Div>
-                <Div className='col-lg-3 col-sm-6'>
+                <Div className="col-lg-3 col-sm-6">
                   <Card
-                    title='Commercial & Product'
-                    link='/service/commercial'
-                    src={service3}
-                    alt='Service'
+                    title="Creative Editing"
+                    link="/service/video-editing"
+                    src={service_3}
+                    alt="Service"
                   />
-                  <Spacing lg='0' md='30'/>
+                  <Spacing lg="0" md="30" />
                 </Div>
-                <Div className='col-lg-3 col-sm-6 cs-hidden_mobile'></Div>
-                <Div className='col-lg-3 col-sm-6'>
+                <Div className="col-lg-3 col-sm-6 cs-hidden_mobile"></Div>
+                <Div className="col-lg-3 col-sm-6">
                   <Card
-                    title='Post-Production & Editing'
-                    link='/service/editing'
-                    src={service4}
-                    alt='Service'
+                    title="Brand & Commercial"
+                    link="/service/commercial"
+                    src={service_4}
+                    alt="Service"
                   />
-                  <Spacing lg='0' md='30'/>
+                  <Spacing lg="0" md="30" />
                 </Div>
-                <Div className='col-lg-3 col-sm-6 cs-hidden_mobile'></Div>
-                <Div className='col-lg-3 col-sm-6 cs-hidden_mobile'></Div>
-                <Div className='col-lg-3 col-sm-6'>
-                  <Card
-                    title='Cinematic Teasers'
-                    link='/service/teasers'
-                    src={service5}
-                    alt='Service'
-                  />
-                  <Spacing lg='0' md='30'/>
-                </Div>
-                <Div className='col-lg-3 col-sm-6 cs-hidden_mobile'></Div>
-                <Div className='col-lg-3 col-sm-6'>
-                  <Card
-                    title='Album Design'
-                    link='/service/album-design'
-                    src={service6}
-                    alt='Service'
-                  />
-                  <Spacing lg='0' md='30'/>
-                </Div>
+                <Div className="col-lg-3 col-sm-6 cs-hidden_mobile"></Div>
               </Div>
             </Div>
           </Div>
         </Div>
       </Div>
-      <Spacing lg='150' md='80'/>
-      <Div className="container">
-        <SectionHeading
-          title='Providing best <br/>pricing for client' 
-          subtitle='Pricing & Packaging'
-        />
-        <Spacing lg='85' md='40'/>
-        <PricingTableList/>
-      </Div>
+
       <Spacing lg='125' md='55'/>
       <TestimonialSlider/>
       <Spacing lg='150' md='80'/>

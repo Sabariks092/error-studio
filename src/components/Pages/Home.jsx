@@ -1,4 +1,5 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
+import { Icon } from '@iconify/react';
 import Card from '../Card';
 import FunFact from '../FunFact';
 import Hero from '../Hero';
@@ -25,18 +26,23 @@ import portfolio_2 from '../../assets/images/website/Best Work/Best Album/12x36/
 import portfolio_3 from '../../assets/images/website/Best Work/Best Album/12x36/44.webp';
 import portfolio_4 from '../../assets/images/website/Best Work/Best Album/12x36/42-(4).webp';
 import portfolio_5 from '../../assets/images/website/Best Work/Best Album/12x36/49-(2).webp';
+import contact_side_img from '../../assets/images/website/Instagram Posters/11-(3).webp';
 
 import video_bg from '../../assets/images/website/Best Work/Best Album/12x36/22.webp';
 import cta_bg from '../../assets/images/cta_bg.jpeg';
 // Hero Social Links
 const heroSocialLinks = [
   {
-    name: 'Behance',
-    links: '/',
+    name: 'Instagram',
+    links: 'https://www.instagram.com/errorstudio.official?igsh=MXExdHRrMDcweXlrNA%3D%3D&utm_source=qr',
   },
   {
-    name: 'Twitter',
-    links: '/',
+    name: 'Facebook',
+    links: 'https://www.facebook.com/share/1BQxvdJGY8/?mibextid=wwXIfr',
+  },
+  {
+    name: 'Youtube',
+    links: 'https://youtube.com/@errorstuido?si=69wiTCukQpkVg9dG',
   },
 ];
 
@@ -123,6 +129,48 @@ export default function Home() {
     window.scrollTo(0, 0);
   }, []);
 
+  const [formData, setFormData] = useState({
+    fullName: '',
+    email: '',
+    projectType: '',
+    mobile: '',
+    message: ''
+  });
+
+  const [loading, setLoading] = useState(false);
+  const [status, setStatus] = useState({ type: '', message: '' });
+
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData(prev => ({ ...prev, [name]: value }));
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    setLoading(true);
+    setStatus({ type: '', message: '' });
+
+    const SCRIPT_URL = "https://script.google.com/macros/s/AKfycbxTygHaGbvikAfjcpi_uJeGJ2kfSN_iMV2rk4D1xoqAdjWArR53yEJ6IIlAORua2cF4wQ/exec";
+
+    try {
+      await fetch(SCRIPT_URL, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'text/plain;charset=utf-8',
+        },
+        body: JSON.stringify(formData)
+      });
+
+      setStatus({ type: 'success', message: 'Thank you! Your enquiry has been sent successfully.' });
+      setFormData({ fullName: '', email: '', projectType: '', mobile: '', message: '' });
+    } catch (error) {
+      console.error('Submission Error:', error);
+      setStatus({ type: 'error', message: 'Something went wrong. Please try again later.' });
+    } finally {
+      setLoading(false);
+    }
+  };
+
   return (
     <>
       {/* Start Hero Section */}
@@ -132,7 +180,6 @@ export default function Home() {
         btnText="Book Your Shoot"
         btnLink="/contact"
         scrollDownId="#service"
-        socialLinksHeading="Follow Us"
         heroSocialLinks={heroSocialLinks}
         bgImageUrl={hero_bg}
       />
@@ -259,7 +306,7 @@ export default function Home() {
         </h2>
         <Spacing lg="70" md="70" />
         <VideoModal
-          videoSrc="https://www.youtube.com/watch?v=VcaAVWtP48A"
+          videoSrc="https://youtu.be/6kZ7cwzcxic?si=3TZi7wuOZ2Yz1Hqf"
           bgUrl={video_bg}
         />
       </Div>
@@ -321,6 +368,117 @@ export default function Home() {
       </Div>
       <Spacing lg="150" md="80" />
       {/* End LogoList Section */}
+
+      {/* Start Contact Section */}
+      <Div className="container">
+        <Div className="row">
+          <Div className="col-lg-6">
+            <img src={contact_side_img} alt="Contact" className="w-100 cs-radius_15" style={{ height: '100%', objectFit: 'cover' }} />
+          </Div>
+          <Div className="col-lg-6 px-5">
+            <Spacing lg="0" md="40" />
+            <SectionHeading
+              title="Do you have a project <br/>in your mind?"
+              subtitle="Get in Touch"
+            />
+            <Spacing lg="55" md="30" />
+            <form onSubmit={handleSubmit} className="row">
+              <Div className="col-sm-6">
+                <label className="cs-primary_color">Full Name*</label>
+                <input 
+                  type="text" 
+                  name="fullName"
+                  className="cs-form_field" 
+                  placeholder="John Doe"
+                  pattern="^[A-Za-z\s]+$"
+                  title="Name should contain only letters and spaces"
+                  value={formData.fullName}
+                  onChange={handleChange}
+                  onInput={(e) => e.target.value = e.target.value.replace(/[0-9]/g, '')}
+                  required
+                />
+                <Spacing lg="20" md="20" />
+              </Div>
+              <Div className="col-sm-6">
+                <label className="cs-primary_color">Email Address*</label>
+                <input 
+                  type="email" 
+                  name="email"
+                  className="cs-form_field" 
+                  placeholder="example@gmail.com"
+                  pattern="^[^\s@]+@[^\s@]+\.[^\s@]+$"
+                  title="Please enter a valid email address with @"
+                  value={formData.email}
+                  onChange={handleChange}
+                  onInput={(e) => e.target.value = e.target.value.replace(/\s/g, '')}
+                  required
+                />
+                <Spacing lg="20" md="20" />
+              </Div>
+              <Div className="col-sm-6">
+                <label className="cs-primary_color">Project Type*</label>
+                <input 
+                  type="text" 
+                  name="projectType"
+                  className="cs-form_field" 
+                  placeholder="Wedding, Event, Commercial..."
+                  pattern="^[A-Za-z\s,.-]+$"
+                  title="Project type should contain only letters"
+                  value={formData.projectType}
+                  onChange={handleChange}
+                  onInput={(e) => e.target.value = e.target.value.replace(/[0-9]/g, '')}
+                  required
+                />
+                <Spacing lg="20" md="20" />
+              </Div>
+              <Div className="col-sm-6">
+                <label className="cs-primary_color">Mobile Number*</label>
+                <input 
+                  type="tel" 
+                  name="mobile"
+                  className="cs-form_field" 
+                  placeholder="9999999999"
+                  pattern="^[0-9]{10}$"
+                  title="Mobile number should contain only 10 digits"
+                  value={formData.mobile}
+                  onChange={handleChange}
+                  onInput={(e) => e.target.value = e.target.value.replace(/[^0-9]/g, '')}
+                  maxLength="10"
+                  required
+                />
+                <Spacing lg="20" md="20" />
+              </Div>
+              <Div className="col-sm-12">
+                <label className="cs-primary_color">Tell us about your project*</label>
+                <textarea
+                  cols="30"
+                  rows="7"
+                  name="message"
+                  className="cs-form_field"
+                  placeholder="Brief description of your project..."
+                  value={formData.message}
+                  onChange={handleChange}
+                  required
+                ></textarea>
+                <Spacing lg="25" md="25" />
+              </Div>
+              <Div className="col-sm-12">
+                <button className="cs-btn cs-style1" disabled={loading}>
+                  <span>{loading ? 'Sending...' : 'Send Message'}</span>
+                  <Icon icon="bi:arrow-right" />
+                </button>
+                {status.message && (
+                  <Div className={`cs-status_msg ${status.type === 'success' ? 'cs-success' : 'cs-error'}`} style={{ marginTop: '20px', color: status.type === 'success' ? '#00e676' : '#ff5252' }}>
+                    {status.message}
+                  </Div>
+                )}
+              </Div>
+            </form>
+          </Div>
+        </Div>
+      </Div>
+      <Spacing lg="150" md="80" />
+      {/* End Contact Section */}
 
       {/* Start CTA Section */}
       <Div className="container">

@@ -23,7 +23,7 @@ export default function BlogDetailsPage() {
     <>
       {/* Start Page Heading Section */}
       <PageHeading
-        title="Blog Single"
+        title="Blog asdfasfas"
         bgSrc={blogDetailsHeroBg}
         pageLinkText={params.blogDetailsId}
       />
@@ -75,7 +75,7 @@ export default function BlogDetailsPage() {
                   simple and easy to distinguish when you have the right
                   framework and support system in place.
                 </p>
-                <Div className="row">
+                {/* <Div className="row">
                   <Div className="col-md-6">
                     <img
                       src={blogDetailsImg1}
@@ -92,7 +92,7 @@ export default function BlogDetailsPage() {
                     />
                     <Div className="cs-height_45 cs-height_lg_45" />
                   </Div>
-                </Div>
+                </Div> */}
                 <h3>Building Confidence Through Action</h3>
                 <p>
                   Taking consistent action towards your business goals is the

@@ -1,15 +1,12 @@
 import React from 'react'
 import Div from '../Div'
-import AuthorWidget from '../Widget/AuthorWidget'
 import RecentPost from '../Widget/RecentPost'
 import SearchWidget from '../Widget/SearchWidget'
 import SideMenuWidget from '../Widget/SideMenuWidget'
 import TagWidget from '../Widget/TagWidget'
-import avatar_1 from '../../assets/images/avatar_1.png'
-import recent_post_1 from '../../assets/images/recent_post_1.jpeg'
-import recent_post_2 from '../../assets/images/recent_post_2.jpeg'
-import recent_post_3 from '../../assets/images/recent_post_3.jpeg'
-import recent_post_4 from '../../assets/images/recent_post_4.jpeg'
+import post1 from '../../assets/images/website/Instagram Posters/0-(4).webp'
+import post2 from '../../assets/images/website/Instagram Posters/8-(2).webp'
+import post3 from '../../assets/images/website/Instagram Posters/11-(4).webp'
 
 export default function Sidebar() {
   const tagData = [
@@ -42,28 +39,7 @@ export default function Sidebar() {
       url:'/'
     },
   ]
-  const archiveData = [
-    {
-      title: 'Archives',
-      url:'/'
-    },
-    {
-      title: '15 Aug 2022',
-      url:'/'
-    },
-    {
-      title: '20 Sep 2021',
-      url:'/'
-    },
-    {
-      title: '11 Dec 2020',
-      url:'/'
-    },
-    {
-      title: '25 jun 2020',
-      url:'/'
-    }
-  ]
+
   const categoryData = [
     {
       title: 'Corporate',
@@ -88,39 +64,26 @@ export default function Sidebar() {
   ]
   const recentPostData = [
     {
-      title: 'How to studio setup...',
-      thumb: recent_post_1,
-      href: '/blog/blog-details',
-      date: '15 Aug 2022'
+      title: 'How to keep fear from ruining your art business with confident',
+      thumb: post1,
+      href: '/blog/how-to-keep-fear-from-ruining-your-art-business-with-confident',
+      date: '07 Mar 2022'
     },
     {
-      title: 'Creative people mind...',
-      thumb: recent_post_2,
-      href: '/blog/blog-details',
-      date: '14 Aug 2022'
+      title: 'Artistic mind will be great for creation anything',
+      thumb: post2,
+      href: '/blog/artistic-mind-will-be-great-for-creation-anything',
+      date: '10 Feb 2022'
     },
     {
-      title: 'AI take over human...',
-      thumb: recent_post_3,
-      href: '/blog/blog-details',
-      date: '13 Aug 2022'
-    },
-    {
-      title: 'You should now add...',
-      thumb: recent_post_4,
-      href: '/blog/blog-details',
-      date: '12 Aug 2022'
-    },
+      title: 'A.I will take over all job for human within next year',
+      thumb: post3,
+      href: '/blog/ai-will-take-over-all-job-for-human-within-next-year',
+      date: '05 Mar 2022'
+    }
   ]
   return (
     <>
-      <Div className="cs-sidebar_item">
-        <AuthorWidget 
-          src={avatar_1}
-          name='Kuber Jontra' 
-          description='At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum.'
-        />
-      </Div>
       <Div className="cs-sidebar_item">
         <SearchWidget title='Search'/>
       </Div>
@@ -128,10 +91,7 @@ export default function Sidebar() {
         <SideMenuWidget title='Categories' data={categoryData}/>
       </Div>
       <Div className="cs-sidebar_item">
-        <RecentPost title='Archives' data={recentPostData}/>
-      </Div>
-      <Div className="cs-sidebar_item">
-        <SideMenuWidget title='Archives' data={archiveData}/>
+        <RecentPost title='Recent Posts' data={recentPostData}/>
       </Div>
       <Div className="cs-sidebar_item">
         <TagWidget title='Tags' data={tagData}/>

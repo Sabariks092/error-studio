@@ -1,4 +1,4 @@
-// import React, { useState, useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import parse from "html-react-parser";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay } from "swiper/modules";
@@ -11,16 +11,17 @@ import carousel1 from "../../assets/images/website/carousel/Banner-02.webp";
 import carousel2 from "../../assets/images/website/carousel/Banner.webp";
 import carousel3 from "../../assets/images/website/Best Work/Best Album/12x36/52.webp";
 import carousel4 from "../../assets/images/website/Best Work/Best Album/12x36/54.webp";
+import carousel5 from "../../assets/images/website/carousel/01.jpg";
+import carousel6 from "../../assets/images/website/carousel/02.jpg";
 
 export default function Hero({
   title,
   subtitle,
   btnText,
   btnLink,
-  socialLinksHeading,
   heroSocialLinks,
 }) {
-  const images = [carousel2,carousel1 ,carousel3, carousel4];
+  const images = [carousel2, carousel1, carousel4, carousel5, carousel6];
   console.log("Carousel Images:", images);
 
   return (
@@ -71,7 +72,7 @@ export default function Hero({
           </div>
         </Div>
       </Div>
-      <VerticalLinks data={heroSocialLinks} title={socialLinksHeading} />
+      <VerticalLinks data={heroSocialLinks} />
       {/* <a href={scrollDownId} className="cs-down_btn">
         .
       </a> */}

@@ -14,7 +14,7 @@ export default function VerticalLinks({ title, data, variant }) {
         <ul className="cs-hero_social_links">
           {data.map((item, index) => (
             <li key={index}>
-              <a href={item.links}>{item.name}</a>
+              <a href={item.links} target='_blank' rel='noopener noreferrer'>{item.name}</a>
             </li>
           ))}
         </ul>

@@ -22,7 +22,7 @@ const postData = [
     date: "07 Mar 2022",
     category: "Business",
     categoryHref: "/blog",
-    href: "/blog/blog-details",
+    href: "/blog/how-to-keep-fear-from-ruining-your-art-business-with-confident",
   },
   {
     thumb: post2,
@@ -32,7 +32,7 @@ const postData = [
     date: "10 Feb 2022",
     category: "Photography",
     categoryHref: "/blog",
-    href: "/blog/blog-details",
+    href: "/blog/artistic-mind-will-be-great-for-creation-anything",
   },
   {
     thumb: post3,
@@ -42,7 +42,7 @@ const postData = [
     date: "05 Mar 2022",
     category: "Tech",
     categoryHref: "/blog",
-    href: "/blog/blog-details",
+    href: "/blog/ai-will-take-over-all-job-for-human-within-next-year",
   },
 ];
 
@@ -55,7 +55,7 @@ export default function BlogPage() {
 
   return (
     <>
-      <PageHeading title="Our Blog" bgSrc={blogHeroBg} pageLinkText="Blog" />
+      <PageHeading title="Our Blogs" bgSrc={blogHeroBg} pageLinkText="Blog" />
       <Spacing lg="150" md="80" />
       <Div className="container">
         <Div className="row">
