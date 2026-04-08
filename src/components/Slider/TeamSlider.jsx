@@ -1,6 +1,4 @@
-import React from 'react';
 import { Icon } from '@iconify/react';
-import { Link } from 'react-router-dom';
 
 const teamData = [
   { memberName: 'Ayanash',       memberDesignation: 'Founder | Photographer & Editor', icon: 'ph:crown-light' },
