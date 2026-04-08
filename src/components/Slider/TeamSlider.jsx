@@ -28,9 +28,8 @@ export default function TeamSlider() {
         className="cs-team-list-grid"
       >
         {teamData.map((item, index) => (
-          <Link
+          <div
             key={index}
-            to="/team/team-details"
             style={{ textDecoration: 'none', display: 'flex' }}
           >
             <div
@@ -91,7 +90,7 @@ export default function TeamSlider() {
                 </div>
               </div>
             </div>
-          </Link>
+          </div>
         ))}
       </div>
       <style>{`
