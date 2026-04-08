@@ -1,12 +1,11 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+// import { Link } from 'react-router-dom';
 import Div from '../Div';
 import './portfolio.css';
 
-export default function Portfolio({ href, src, title, subtitle, variant }) {
+export default function Portfolio({  src, title, subtitle, variant }) {
   return (
-    <Link
-      to={href}
+    <div
       className={`cs-portfolio cs-bg ${variant ? variant : 'cs-style1'}`}
     >
       <>
@@ -21,6 +20,6 @@ export default function Portfolio({ href, src, title, subtitle, variant }) {
           <Div className="cs-portfolio_subtitle text-gray-300" >{subtitle}</Div>
         </Div>
       </>
-    </Link>
+    </div>
   );
 }

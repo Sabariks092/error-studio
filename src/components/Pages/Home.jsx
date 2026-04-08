@@ -90,6 +90,30 @@ const portfolioData = [
     href: '/portfolio/portfolio-details',
     src: portfolio_5,
   },
+  {
+    title: 'Urban Fashion',
+    subtitle: 'Commercial Shoot',
+    href: '/portfolio/portfolio-details',
+    src: portfolio_4,
+  },
+  {
+    title: 'Urban Fashion',
+    subtitle: 'Commercial Shoot',
+    href: '/portfolio/portfolio-details',
+    src: portfolio_5,
+  },
+  {
+    title: 'Urban Fashion',
+    subtitle: 'Commercial Shoot',
+    href: '/portfolio/portfolio-details',
+    src: portfolio_4,
+  },
+  {
+    title: 'Urban Fashion',
+    subtitle: 'Commercial Shoot',
+    href: '/portfolio/portfolio-details',
+    src: portfolio_5,
+  },
 ];
 
 export default function Home() {

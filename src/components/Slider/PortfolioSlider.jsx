@@ -1,41 +1,58 @@
-import React from 'react';
-import Portfolio from '../Portfolio';
-import Div from '../Div';
-import Slider from 'react-slick';
+import React, { useState } from "react";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Pagination, Autoplay } from "swiper/modules";
+import Portfolio from "../Portfolio";
+import Div from "../Div";
+import "swiper/css";
+import "swiper/css/pagination";
 
 export default function PortfolioSlider({ data }) {
-  /** Slider Settings **/
-  const settings = {
-    className: 'center',
-    centerMode: true,
-    infinite: true,
-    centerPadding: '0',
-    slidesToShow: 3,
-    speed: 500,
-    dots: true,
-    arrows: false,
-    responsive: [
-      {
-        breakpoint: 768,
-        settings: {
-          slidesToShow: 1,
-        },
-      },
-    ],
+  const [swiper, setSwiper] = useState(null);
+
+  const handleSlideClick = (index) => {
+    if (swiper) {
+      swiper.slideToLoop(index);
+    }
   };
 
   return (
-    <Slider {...settings} className="cs-slider cs-style3 cs-gap-24">
+    <Swiper
+      modules={[Pagination, Autoplay]}
+      spaceBetween={24}
+      slidesPerView={1}
+      centeredSlides={true}
+      loop={true}
+      speed={500}
+      autoplay={{
+        delay: 3000,
+        disableOnInteraction: false,
+      }}
+    
+      breakpoints={{
+        768: {
+          slidesPerView: 3,
+        },
+      }}
+      onSwiper={setSwiper}
+      className="cs-slider cs-style3"
+    >
       {data.map((item, index) => (
-        <Div key={index}>
-          <Portfolio
-            title={item.title}
-            subtitle={item.subtitle}
-            href={item.href}
-            src={item.src}
-          />
-        </Div>
+        <SwiperSlide key={index}>
+          {({ isActive }) => (
+            <Div
+              className={isActive ? "slick-center" : ""}
+              onClick={() => handleSlideClick(index)}
+            >
+              <Portfolio
+                title={item.title}
+                subtitle={item.subtitle}
+                href={item.href}
+                src={item.src}
+              />
+            </Div>
+          )}
+        </SwiperSlide>
       ))}
-    </Slider>
+    </Swiper>
   );
 }

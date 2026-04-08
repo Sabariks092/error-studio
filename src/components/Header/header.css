@@ -2,7 +2,7 @@
 ## Basic Color
 ----------------------------------------------------------------*/
 :root {
-  --accent: #E60A06;
+  --accentt: #F9A30A;
 }
 
 .cs-site_header {
@@ -258,7 +258,7 @@
   transform: rotate(45deg);
 }
 .cs-close:hover {
-  color: var(--accent);
+  color: var(--accentt);
   transform: scale(1.05);
 }
 
@@ -386,7 +386,7 @@
     background-color: #181818;
     position: absolute;
     box-shadow: 0px 1px 2px 0px rgba(2, 0, 181, 0.1);
-    border-top: 2px solid var(--accent);
+    border-top: 2px solid var(--accentt);
     padding: 10px 0;
     z-index: 100;
     opacity: 0;
@@ -414,7 +414,7 @@
     left: 100%;
   }
   .cs-nav .cs-nav_list .active {
-    color: var(--accent);
+    color: var(--accentt);
   }
   .cs-munu_toggle,
   .cs-munu_dropdown_toggle {
