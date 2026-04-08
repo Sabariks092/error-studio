@@ -1,23 +1,14 @@
-import { Icon } from "@iconify/react";
 import React, { useEffect } from "react";
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { pageTitle } from "../../helper";
 import Cta from "../Cta";
 import PageHeading from "../PageHeading";
-import Portfolio from "../Portfolio";
 import Div from "../Div";
 import SectionHeading from "../SectionHeading";
 import Spacing from "../Spacing";
 import ImagePopup from "../ImagePopup/ImagePopup";
 import portfolio_hero_bg from "../../assets/images/portfolio_hero_bg.jpeg";
-import portfolio_4 from "../../assets/images/portfolio_4.jpeg";
-import portfolio_5 from "../../assets/images/portfolio_5.jpeg";
-import portfolio_6 from "../../assets/images/portfolio_6.jpeg";
-import portfolio_7 from "../../assets/images/portfolio_7.jpeg";
-import portfolio_8 from "../../assets/images/portfolio_8.jpeg";
-import portfolio_9 from "../../assets/images/portfolio_9.jpeg";
-import portfolio_10 from "../../assets/images/portfolio_10.jpeg";
 import cta_bg_2 from "../../assets/images/cta_bg_2.jpeg";
 
 // Portfolio images from assets/images/website/portfolio
@@ -68,11 +59,7 @@ import portfolio_12x36_52 from "../../assets/images/website/portfolio/12X36/52.w
 import portfolio_12x36_53 from "../../assets/images/website/portfolio/12X36/53.webp";
 import PortfolioCardForPortfolioPage from "../Portfolio/PortfolioCardForPortfolioPage";
 import {
-  ArrowDownNarrowWide,
-  ArrowUpNarrowWide,
-  ChevronsDown,
   ChevronsDownIcon,
-  ChevronsUp,
   ChevronsUpIcon,
 } from "lucide-react";
 

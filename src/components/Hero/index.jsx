@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import parse from "html-react-parser";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay } from "swiper/modules";
@@ -9,7 +9,7 @@ import Div from "../Div";
 import VerticalLinks from "../VerticalLinks";
 import carousel1 from "../../assets/images/website/carousel/Banner-02.webp";
 import carousel2 from "../../assets/images/website/carousel/Banner.webp";
-import carousel3 from "../../assets/images/website/Best Work/Best Album/12x36/52.webp";
+
 import carousel4 from "../../assets/images/website/Best Work/Best Album/12x36/54.webp";
 import carousel5 from "../../assets/images/website/carousel/01.jpg";
 import carousel6 from "../../assets/images/website/carousel/02.jpg";

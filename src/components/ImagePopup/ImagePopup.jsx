@@ -36,7 +36,7 @@ const ImagePopup = ({
 
     if (isOpen) window.addEventListener("keydown", handle);
     return () => window.removeEventListener("keydown", handle);
-  }, [isOpen]);
+  }, [isOpen, onClose, onNext, onPrev]);
 
   // Mouse wheel zooming
   const handleWheel = (e) => {
