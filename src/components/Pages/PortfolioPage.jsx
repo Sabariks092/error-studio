@@ -2,14 +2,13 @@ import React, { useEffect } from "react";
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { pageTitle } from "../../helper";
-import Cta from "../Cta";
+// import Cta from "../Cta";
 import PageHeading from "../PageHeading";
 import Div from "../Div";
 import SectionHeading from "../SectionHeading";
 import Spacing from "../Spacing";
 import ImagePopup from "../ImagePopup/ImagePopup";
 import portfolio_hero_bg from "../../assets/images/portfolio_hero_bg.jpeg";
-import cta_bg_2 from "../../assets/images/cta_bg_2.jpeg";
 
 // Portfolio images from assets/images/website/portfolio
 import portfolio_0_2 from "../../assets/images/website/portfolio/0-(2).webp";
@@ -336,7 +335,7 @@ export default function PortfolioPage() {
         </Div>
       </Div>
       <Spacing lg="145" md="80" />
-      <Cta title="agency@arino.com" bgSrc={cta_bg_2} variant="rounded-0" />
+      {/* <Cta title="agency@arino.com" bgSrc={cta_bg_2} variant="rounded-0" /> */}
 
       {/* Image Popup */}
       <ImagePopup

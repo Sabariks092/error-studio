@@ -8,12 +8,7 @@ import TextWidget from '../Widget/TextWidget';
 import './footer.css';
 import footerLogo from '../../assets/images/error-studio-logo.png';
 
-const copyrightLinks = [
-  {
-    title: 'Designed And Developed By  Innovations',
-    href: '/',
-  }
-];
+
 
 const serviceMenu = [
   {
@@ -77,7 +72,7 @@ export default function Footer({ copyrightText, logoSrc, logoAlt, text }) {
             <Div className="cs-copyright">Copyright © 2026 Error Studio.</Div>
           </Div>
           <Div className="cs-bottom_footer_right">
-            <MenuWidget menuItems={copyrightLinks} variant=" cs-style2" />
+            <a href="https://samhub.in" target="_blank" rel="noopener noreferrer">Designed and developed by Samhub Innovations</a>
           </Div>
         </Div>
       </Div>
